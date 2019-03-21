@@ -1,0 +1,180 @@
+/* HOME SCREEN */
+
+
+html *
+{
+    font-family: "futura", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#page1 {
+    position: relative;
+    background-size: cover;
+    height: 100vh;
+    background-color: gray;
+    overflow: hidden;
+    display: 
+}
+
+
+
+
+/* HOME PAGE 1 */
+
+
+
+
+#home {
+    background-image: url("https://dl.dropboxusercontent.com/s/premzkiskp191cb/AAM_home.jpg?dl=0");
+    background-size: cover;
+    height:100%;
+    overflow: hidden;
+    opacity: 100;
+    /*display: block; */
+    display: none;
+    
+}
+
+
+
+
+/* HOME START SCREEN */
+
+
+#start{
+    position:relative;
+    height: 100%;
+    background-color:white;
+    overflow: hidden;
+    /*display: none;*/
+   
+    
+}
+
+.start_button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+}
+
+.start_pos {
+    position: absolute;
+    min-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.start_title_font {
+    position: absolute;
+    color: #2d9ad6;
+    font-family: "futura", sans-serif;
+    font-weight: 100;
+    font-size: 3vh;
+    top: 0%;
+    left: 50%;
+    padding-top: 00px;
+    transform: translate(-50%, 0%);
+    text-align: center;
+}
+
+.start_top_font {
+    color: #2d9ad6;
+    font-family: "futura", sans-serif;
+    font-weight: 100;
+    font-size: 3vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    position: absolute;
+}
+
+.logo img {
+    position: absolute;
+    padding-bottom: 25px;
+    width: auto;
+    height: 5%;
+    top:100%;
+    left:50%;
+    transform: translate(-50%, -100%);
+
+}
+
+.ent {
+    color: #2d9ad6;
+    font-family: "futura", sans-serif;
+    font-weight: 100;
+font-size: 3vh;
+    background: none;
+    border: 4px solid;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 10px 50px;  
+    cursor: none;
+}
+
+.ent:focus {
+
+    background-color: #2d9ad6;
+    color: #fff;
+    border: 4px solid #2d9ad6;
+    border-radius: 5px;
+    transition-duration: 300ms;
+}
+
+.ent:focus {outline:0;}
+
+
+
+
+/* QUESTION 1 */
+
+.slide {
+    height: 100vh;
+    background-color:azure;
+}
+
+.QHeader{
+    
+    color: #141e50;
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+    font-size: 3vh;
+}
+
+.QButtons {
+    
+    text-align: center;
+}
+
+.Question {
+    
+    font-size: 3vh;
+    text-align: center;
+    color: #2d9ad6;
+    
+}
+
+.btn {
+    
+    color: #2d9ad6;
+    outline: 0;
+    height: 30vh;
+    width: 30vh;
+    font-weight: 100;
+    font-size: 3vh;
+    background: none;
+    border: 4px solid;
+    border-radius: 5px;
+    
+}
