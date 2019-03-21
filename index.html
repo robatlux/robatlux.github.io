@@ -24,12 +24,14 @@
                 <h1>Sei pronto per il giro del mondo?</h1>
             </div>
                 <div class="start_pos">
-                <div class="start_button">
-                    <button class="btn ent">Tocca qui per iniziare</button>
-                </div>
+                    
                 <div class="start_top_font">
                     <h4>Riconosci la fake news e vinci!</h4>
-                </div>   
+                </div>  
+                    
+                <div class="start_button">
+                    <button class="ent">Tocca qui per iniziare</button>
+                </div> 
             </div>
             <div class="logo">
                     <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
@@ -40,36 +42,47 @@
     <!-- Question 1 -->
     
     <div class= "slide" id = "Q1">
-        <h1>News n°1</h1>
+        <div class = "QHeader">
+            <h1>News n°1</h1>
+        </div>
+        <div class = "Question">
+            <h4>Question 1</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn ans1"> Vero </button>
+            <button class = "btn ans2"> Falso </button>
+            
+        </div>
     </div>
     
     </body>
     
 <script>
     
-    
-const home = document.getElementById("home");
-const start = document.getElementById("start");
-const startButton = document.getElementById("start_button");
 
     
-var startClicked = false;  
-    
-home.addEventListener("click", wakeUp);
+//const home = document.getElementById("home");
+//const start = document.getElementById("start");
+//const startButton = document.getElementById("start_button");
 
-startButton.addEventListener('click', function(){
-    startClicked = true;
-});
-
-function revert(){
-    home.style.display = "block";
-    start.style.display = "none"; 
-}
     
-function wakeUp(){
-    home.style.display = "none";
-    start.style.display = "block";
-}
+//var startClicked = false;  
+    
+//home.addEventListener("click", wakeUp);
+
+//startButton.addEventListener('click', function(){
+//    startClicked = true;
+//});
+
+//function revert(){
+//    home.style.display = "block";
+//    start.style.display = "none"; 
+//}
+    
+//function wakeUp(){
+//    home.style.display = "none";
+//    start.style.display = "block";
+//}
 
 //if (startClicked == true){}
 //    } else {
