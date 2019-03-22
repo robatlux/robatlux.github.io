@@ -47,17 +47,48 @@
             <h1>News n°1</h1>
         </div>
         <div class = "Question">
-            <h4>Question 1</h4>
+            <h4>Se non si inverte presto la rotta, la quantità di plastica presente nei mari potrebbe superare la quantità di pesci entro il?</h4>
         </div>
         <div class= "QButtons">
-            <button class = "btn ans1"> Vero </button>
-            <button class = "btn ans2"> Falso </button>
-            <button class = "btn ans1"> Vero </button>
-            <button class = "btn ans1"> Vero </button>
+            <button class = "btn" onclick="falseAnswer1(this)"> 2025 </button>
+            <button class = "btn" onclick="falseAnswer1(this)"> È già così </button>
+            <button id = "answer_1" class = "btn" onclick="trueAnswer(this)"> 2050 </button>
+            <button class = "btn" onclick="falseAnswer1(this)"> 2100 </button>
 
         </div>
         <div class="logo">
             <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_1" class = "Answer">
+            <h4>2050</h4>
+            Si calcola che ogni anno finiscano negli oceani circa 8 milioni di tonnellate di plastica, pari a un camion al minuto: se si prosegue di questo passo entro il 2050 nei mari ci sarà più plastica che pesce.
+        </div>
+    </div>
+        
+        
+        
+        <!-- Question 2 -->
+    
+    <div class= "slide" id = "Q2">
+        <div class = "QHeader">
+            <h1>News n°2</h1>
+        </div>
+        <div class = "Question">
+            <h4>L’Earth Overshoot Day, ovvero il giorno in cui l’uomo esaurisce le risorse che il pianeta è in grado di rigenerare in un anno, nel 2018 è stato?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)"> Il 10 ottobre </button>
+            <button class = "btn" onclick="falseAnswer1(this)"> Il 15 giugno </button>
+            <button class = "btn" onclick="falseAnswer1(this)"> Il 30 novembre </button>
+            <button id = "answer_2" class = "btn true" onclick="trueAnswer(this)"> Il 1° agosto </button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_2" class = "Answer">
+            <h4>Il 1° agosto</h4>
+            L’Earth Overshoot Day indica il momento dell’anno a partire dal quale il pianete vive in “debito” di risorse. Nel 1975 cadeva il 28 novembre, nel 1997 il 10 ottobre, nel 2018 è stato il 1° agosto.
         </div>
     </div>
     
@@ -65,7 +96,8 @@
     
 <script>
     
-
+var question_number = 1;
+var answer = 'test';
     
 //const home = document.getElementById("home");
 //const start = document.getElementById("start");
@@ -94,6 +126,55 @@
 //    } else {
 //    setTimeout(revert, 2000);
 //    }
- 
+    
+function falseAnswer1(elem){
+    
+    // turn clicked on question red
+    elem.classList.add('ansFalse');
+    // set correct question id
+    var disable_question = 'Q' + question_number; 
+    // disable clicking in question div
+    document.getElementById(disable_question).style.pointerEvents = 'none';
+    // trigger reveal
+    setTimeout(reveal, 150);
+
+    
+    
+}
+
+
+function reveal() {
+    
+    // set answer box to correct id
+    var answer = 'answer_' + question_number;
+    // set answer text to correct id
+    var correct_answer = 'correct_answer_' + question_number; 
+    // reveal answer text
+    document.getElementById(correct_answer).style.opacity = '1';
+    // reveal correct answer box
+    document.getElementById(answer).classList.add("ansTrue");
+    
+}
+    
+function trueAnswer(elem){
+    //reveals correct answer box
+    elem.classList.add('ansTrue');
+    //set correct question id
+    var disable_question = 'Q' + question_number; 
+    //disable clicking in question div
+    document.getElementById(disable_question).style.pointerEvents = 'none';
+    //set answer id and then reveal
+    var correct_answer = 'correct_answer_' + question_number;
+    document.getElementById(correct_answer).style.opacity = '1';
+    //increases score
+    score = score +1;
+    //alert(score);
+    
+}
+
+var score = 0;
+    
+    
+    
 </script>
 </html>

@@ -80,7 +80,7 @@ body {
     font-size: 3vh;
     width: 100vw;
     left: 50%;
-    padding-top: 2vh;
+    padding-top: 1vh;
     transform: translate(-50%, 0%);
     text-align: center;
 }
@@ -146,7 +146,7 @@ body {
 
 .QHeader{
     
-    padding-top: 2vh;
+    padding-top: 1vh;
     color: #141e50;
     text-align: center;
     font-weight: 100;
@@ -191,4 +191,52 @@ body {
     border: 4px solid;
     border-radius: 5px;
     
+}
+
+.Answer {
+    
+    width: 80vw;
+    position: absolute;
+    left:50%;
+    top: 75%;
+    transform: translate(-50%, -50%); 
+    font-size: 3vh;
+    text-align: center;
+    color: #2d9ad6;
+    transition-duration: 300ms;
+    opacity: 0;
+    
+}
+
+.ansTrue {
+    
+    margin: 2vh;
+    outline: 0;
+
+    font-weight: 100;
+    font-size: 100%;
+    
+    background-color: transparent;
+    color: #96de1a;
+    border: 4px solid #96de1a;
+    border-radius: 5px;
+    height: 17vw;
+    width: 17vw;
+    transition-duration: 300ms;
+    
+}
+
+.ansFalse {
+    
+    background-color: transparent;
+    color: #de1a3b;
+    border: 4px solid #de1a3b;
+    border-radius: 5px;
+    transition-duration: 300ms;
+    
+}
+
+#Q2{
+    
+    display: none
 }
