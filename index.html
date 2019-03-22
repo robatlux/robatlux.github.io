@@ -10,7 +10,8 @@
         
     </head>
     
-    <body>
+    <body onload="startup()">
+        
         
         <!-- HOME SCREEN -->
         
@@ -31,7 +32,7 @@
                 </div>  
                     
                 <div class="start_button">
-                    <button class="ent">Tocca qui per iniziare</button>
+                    <button class="ent" onclick="start_quiz()">Tocca qui per iniziare</button>
                 </div> 
             </div>
             <div class="logo">
@@ -42,7 +43,7 @@
     
     <!-- Question 1 -->
     
-    <div class= "slide" id = "Q1">
+    <div class= "slide" id = "Q1" style= "display: none">
         <div class = "QHeader">
             <h1>News n°1</h1>
         </div>
@@ -69,7 +70,7 @@
         
         <!-- Question 2 -->
     
-    <div class= "slide" id = "Q2">
+    <div class= "slide" id = "Q2" style="display: none">
         <div class = "QHeader">
             <h1>News n°2</h1>
         </div>
@@ -91,13 +92,631 @@
             L’Earth Overshoot Day indica il momento dell’anno a partire dal quale il pianete vive in “debito” di risorse. Nel 1975 cadeva il 28 novembre, nel 1997 il 10 ottobre, nel 2018 è stato il 1° agosto.
         </div>
     </div>
+        
+        
+                <!-- Question 3 -->
     
+    <div class= "slide" id = "Q3" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°3</h1>
+        </div>
+        <div class = "Question">
+            <h4>Chi è il maggior produttore di energia pulita al mondo?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)"> Stati Uniti </button>
+            <button class = "btn" onclick="falseAnswer1(this)"> Svezia </button>
+            <button id = "answer_3" class = "btn true" onclick="trueAnswer(this)"> Cina </button>
+            <button class = "btn" onclick="falseAnswer1(this)"> India </button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_3" class = "Answer">
+            <h4>Cina</h4>
+            Il valore aggiunto manifatturiero della Cina nel settore delle energie pulite (pannelli solari, turbine eoliche, batterie e veicoli elettrici) è di 40 miliardi di dollari, per secondo viene il Giappone con soli 5 miliardi di dollari.
+        </div>
+    </div>
+        
+        
+        <!-- Question 4 -->
+    
+    <div class= "slide" id = "Q4" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°4</h1>
+        </div>
+        <div class = "Question">
+            <h4>ESGP è l’acronimo di…</h4>
+        </div>
+        <div class= "QButtons">
+            <button id = "answer_4" class = "btn true" onclick="trueAnswer(this)">Environmental, Social, Governance and Political</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Engagement, Sovereign, Governance and Purchase</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Environmental, Social, Governance and Profit</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Ente per la Sostenibilità Governativa Politica </button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_4" class = "Answer">
+            <h4>Environmental, Social, Governance and Political</h4>
+        </div>
+    </div>
+        
+             <!-- Question 5 -->
+    
+    <div class= "slide" id = "Q5" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°5</h1>
+        </div>
+        <div class = "Question">
+            <h4>Qual è stato il più grande finanziatore internazionale di energie rinnovabili non idroelettriche nei paesi emergenti negli ultimi dieci anni?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">La norvegese Green Energy Group</button>
+            <button class = "btn" onclick="falseAnswer1(this)">La russa Gazprom</button>
+            <button class = "btn" onclick="falseAnswer1(this)">La cinese China Energy Investment</button>
+            <button id = "answer_5" class = "btn true" onclick="trueAnswer(this)">L’italiana Enel</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_5" class = "Answer">
+            <h4>Enel</h4>
+            L'azienda italiana di servizi energetici indipendenti ha fornito 7,2 miliardi di dollari a progetti principalmente in America Latina.
+        </div>
+    </div>
+    
+                  <!-- Question 6 -->
+    
+    <div class= "slide" id = "Q6" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°6</h1>
+        </div>
+        <div class = "Question">
+            <h4>Quando e sotto quale segretario venne lanciato il Global Compact delle Nazioni Unite?</h4>
+        </div>
+        <div class= "QButtons">
+            <button id = "answer_6" class = "btn true" onclick="trueAnswer(this)">Nel 1999, con Kofi Annan</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Nel 2008, con Ban Ki-moon</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Nel 1995, con Boutros Boutros-Ghali</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Nel 2018, con Antonio Guterres</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_6" class = "Answer">
+            <h4>Nel 1999 con Kofi Annan</h4>
+            Il UN Global Compact è un’iniziativa lanciata nel 1999 da Kofi Annan in occasione del World Economic Forum di Davos, per incoraggiare le aziende di tutto il mondo ad adottare politiche sostenibili e nel rispetto della responsabilità sociale d'impresa.
+        </div>
+    </div>
+        
+        
+        
+                          <!-- Question 7 -->
+    
+    <div class= "slide" id = "Q7" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°7</h1>
+        </div>
+        <div class = "Question">
+            <h4>Qual è l’unico paese al mondo che non aderisce all’accordo di Parigi Cop21 sulla riduzione delle emissioni inquinanti?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">Arabia Saudita</button>
+            <button id = "answer_7" class = "btn true" onclick="trueAnswer(this)">Stati Uniti</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Venezuela</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Corea del Nord</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_7" class = "Answer">
+            <h4>Stati Uniti</h4>
+            Durante la presidenza Obama, nel 2015, gli Stati Uniti avevano firmato a Parigi l’accordo sulla riduzione delle emissioni inquinanti; Donald Trump ha poi annunciato nel 2017 l’uscita degli USA dall’accordo.
+        </div>
+    </div>
+        
+        
+            
+                          <!-- Question 8 -->
+    
+    <div class= "slide" id = "Q8" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°8</h1>
+        </div>
+        <div class = "Question">
+            <h4>Che dimensioni ha raggiunto nel 2018 il mercato globale dell’impact investing?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">16 miliardi di dollari</button>
+            <button id = "answer_8" class = "btn true" onclick="trueAnswer(this)">228 miliardi di dollari</button>
+            <button class = "btn" onclick="falseAnswer1(this)">114 miliardi di dollari</button>
+            <button class = "btn" onclick="falseAnswer1(this)">1,4 miliardi di dollari</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_8" class = "Answer">
+            <h4>228 miliardi di dollari</h4>
+            Secondo l’ultimo Global Impact Investing Network Annual Survey, le dimensioni del mercato globale dell’impact investing sono raddoppiate, da 114 miliardi di dollari nel 2017 a 228 miliardi di dollari nel 2018.
+        </div>
+    </div>
+        
+        
+               
+                          <!-- Question 9 -->
+    
+    <div class= "slide" id = "Q9" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°9</h1>
+        </div>
+        <div class = "Question">
+            <h4>Qual è il paese più “gender-equal” del mondo, ovvero dove la diseguaglianza di genere risulta più bassa?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">Canada</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Giappone</button>
+            <button id = "answer_9" class = "btn true" onclick="trueAnswer(this)">Islanda</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Olanda</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_9" class = "Answer">
+            <h4>Islanda</h4>
+            Il paese più gender-equal oggi è l'Islanda che ha chiuso di oltre l'85% il suo gender-gap complessivo. Seguono la Norvegia (83,5%), la Svezia e la Finlandia (82,2%).
+        </div>
+    </div>
+        
+        
+                    
+                          <!-- Question 10 -->
+    
+    <div class= "slide" id = "Q10" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°10</h1>
+        </div>
+        <div class = "Question">
+            <h4>Quanti sono oggi i firmatari dei Principles for Responsible Investment (PRI) delle Nazioni Unite lanciati nel 2006?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">780</button>
+            <button class = "btn" onclick="falseAnswer1(this)">1.230</button>
+            <button class = "btn" onclick="falseAnswer1(this)">5.000</button>
+            <button id = "answer_10" class = "btn true" onclick="trueAnswer(this)">1.800</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_10" class = "Answer">
+            <h4>1.800</h4>
+            I Principles for Responsible Investment (o PRI) sono stati lanciati con l’intento di favorire la diffusione dell’investimento sostenibile e responsabile tra gli investitori istituzionali. Oggi sottoscrivono gli UN PRI circa 1.800 società e organizzazioni per un totale di 68 mila miliardi di dollari di AuM.
+        </div>
+    </div>
+        
+        
+                    
+                          <!-- Question 11 -->
+    
+    <div class= "slide" id = "Q11" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°11</h1>
+        </div>
+        <div class = "Question">
+            <h4>Il valore del mercato globale dei green bond nel 2018 ha sfiorato quota?</h4>
+        </div>
+        <div class= "QButtons">
+            <button id = "answer_11" class = "btn true" onclick="trueAnswer(this)">400 miliardi di dollari</button>
+            <button class = "btn" onclick="falseAnswer1(this)">280 miliardi di dollari</button>
+            <button class = "btn" onclick="falseAnswer1(this)">68,5 miliardi dollari</button>
+            <button class = "btn" onclick="falseAnswer1(this)">720 miliardi dollari</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_11" class = "Answer">
+            <h4>400 miliardi di dollari</h4>
+            Di questi 400 miliardi, sono stati emessi green bond per 167,3 miliardi di dollari nel solo 2018. Tuttavia si stima che per avere un impatto significativo sull’ambiente la cifra dovrebbe raggiungere il 1.000 miliardi entro il 2020.
+        </div>
+    </div>
+        
+        
+                
+                    
+                          <!-- Question 12 -->
+    
+    <div class= "slide" id = "Q12" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°12</h1>
+        </div>
+        <div class = "Question">
+            <h4>Quale paese detiene il primato dei brevetti e della ricerca nel campo delle rinnovabili?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">Giappone</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Unione Europea</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Stati Uniti</button>
+            <button id = "answer_12" class = "btn true" onclick="trueAnswer(this)">Cina</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_12" class = "Answer">
+            <h4>Cina</h4>
+            Il 29% di tutti i brevetti nel campo delle rinnovabili fa capo alla Cina. Gli USA seguono con il 18%. Giappone e UE con il 14%.
+        </div>
+    </div>
+        
+        
+                            
+                          <!-- Question 13 -->
+    
+    <div class= "slide" id = "Q13" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°13</h1>
+        </div>
+        <div class = "Question">
+            <h4>Per far fronte al global warming nel 2017 gli esperti hanno stabilito l’obiettivo per il 2020 di non andare oltre un aumento della temperatura di?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">4°C</button>
+            <button id = "answer_13" class = "btn true" onclick="trueAnswer(this)">1,5°C</button>
+            <button class = "btn" onclick="falseAnswer1(this)">0,5°C</button>
+            <button class = "btn" onclick="falseAnswer1(this)">3°C</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_13" class = "Answer">
+            <h4>1,5°C</h4>
+            Con un surriscaldamento pari a 1,5°C, il livello dei mari crescerà di 0,4 m entro il 2100 e di 0,5 m con un surriscaldamento di 2°C.
+        </div>
+    </div>
+        
+        
+                                   
+                          <!-- Question 14 -->
+    
+    <div class= "slide" id = "Q14" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°14</h1>
+        </div>
+        <div class = "Question">
+            <h4>Quanti sono i Sustainable Development Goals delle Nazioni Unite (UN SDG)?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">15</button>
+            <button class = "btn" onclick="falseAnswer1(this)">6</button>
+            <button class = "btn" onclick="falseAnswer1(this)">9</button>
+            <button id = "answer_14" class = "btn true" onclick="trueAnswer(this)">17</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_14" class = "Answer">
+            <h4>17</h4>
+            Gli obiettivi di sviluppo sostenibile delle Nazioni Unite (Sustainable Development Goals) costituiscono una serie di 17 target che mirano a risolvere un'ampia gamma di problematiche riguardanti lo sviluppo economico e sociale.
+            
+        </div>
+    </div>
+        
+        
+                                           
+                          <!-- Question 15 -->
+    
+    <div class= "slide" id = "Q15" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°15</h1>
+        </div>
+        <div class = "Question">
+            <h4>Quanti sono gli specialisti ESG di Aberdeen Standard Investments in tutto il mondo?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">Meno di 10</button>
+            <button class = "btn" onclick="falseAnswer1(this)">15</button>
+            <button id = "answer_15" class = "btn true" onclick="trueAnswer(this)">Più di 50</button>
+            <button class = "btn" onclick="falseAnswer1(this)">35</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_15" class = "Answer">
+            <h4>Più di 50</h4>
+            
+        </div>
+    </div>
+        
+        
+                                                   
+                          <!-- Question 16 -->
+    
+    <div class= "slide" id = "Q16" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°16</h1>
+        </div>
+        <div class = "Question">
+            <h4>Quanti sono i Sustainable Development Goals delle Nazioni Unite (UN SDG)?</h4>
+        </div>
+        <div class= "QButtons">
+            <button id = "answer_16" class = "btn true" onclick="trueAnswer(this)">Sustainable and Responsible Investment</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Social Reporting Initiative</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Social and Renewable Investment</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Salary Regulatory Institute</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_16" class = "Answer">
+            <h4>Sustainable and Responsible Investment</h4>
+            
+        </div>
+    </div>
+        
+        
+                                                           
+                          <!-- Question 17 -->
+    
+    <div class= "slide" id = "Q17" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°17</h1>
+        </div>
+        <div class = "Question">
+            <h4>In Aberdeen Standard Investments l’integrazione dei fattori ESG riguarda? </h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">Una selezione di asset class a discrezione del cliente</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Le asset class più richieste sul mercato</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Solo i prodotti azionari</button>
+            <button id = "answer_17" class = "btn true" onclick="trueAnswer(this)">Tutte le asset class in cui investiamo</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_17" class = "Answer">
+            <h4>Tutte le asset class in cui investiamo</h4>
+            
+        </div>
+    </div>
+        
+        
+                                                               
+                          <!-- Question 18 -->
+    
+    <div class= "slide" id = "Q18" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°18</h1>
+        </div>
+        <div class = "Question">
+            <h4>In Cina, nella provincia settentrionale dello Shanxi, si trova un immenso parco solare dalla forma molto speciale, quale?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">Lanterna</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Di lettera H</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Gatto</button>
+            <button id = "answer_18" class = "btn true" onclick="trueAnswer(this)">Panda</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_18" class = "Answer">
+            <h4>Panda</h4>
+            Inaugurato nel 2017, Panda Green Energy Group, società di Hong Kong, ha voluto trasformare una delle più note icone cinesi in un vero e proprio marchio di fabbrica per sensibilizzare i più giovani al tema dell’energia pulita.
+            
+        </div>
+    </div>
+        
+        
+                                                                    
+                          <!-- Question 19 -->
+    
+    <div class= "slide" id = "Q19" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°19</h1>
+        </div>
+        <div class = "Question">
+            <h4>Quante iniziative di engagement focalizzate alle tematiche ESG conduce in media Aberdeen Standard Investments ogni trimestre?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">Da 25 a 40</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Da 65 a 80</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Da 10 a 20</button>
+            <button id = "answer_19" class = "btn true" onclick="trueAnswer(this)">Più di 100</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_19" class = "Answer">
+            <h4>Più di 100</h4>
+            
+        </div>
+    </div>
+        
+        
+                                                                            
+                          <!-- Question 20 -->
+    
+    <div class= "slide" id = "Q20" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°20</h1>
+        </div>
+        <div class = "Question">
+            <h4>L’impronta di carbonio (o carbon footprint) è?</h4>
+        </div>
+        <div class= "QButtons">
+            <button id = "answer_20" class = "btn true" onclick="trueAnswer(this)">La quantità di emissioni di gas a effetto serra generate lungo il ciclo di vita di un prodotto/servizio</button>
+            <button class = "btn" onclick="falseAnswer1(this)">L’impronta lasciata dagli astronauti durante l’allunaggio</button>
+            <button class = "btn" onclick="falseAnswer1(this)">La misura della quantità di carbonio presente nelle batterie elettriche</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Il parametro con cui si stabilisce la quantità di carbone presente in una miniera</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_20" class = "Answer">
+            <h4>La quantità di emissioni di gas a effetto serra generate lungo il ciclo di vita di un prodotto/servizio</h4>
+            L’impronta di carbonio o carbon footprint è un parametro che viene utilizzato per stimare le emissioni gas serra causate da un prodotto, da un servizio, da un'organizzazione, da un evento o da un individuo, espresse generalmente in tonnellate di CO2 equivalente.
+            
+        </div>
+    </div>
+        
+        
+                                                                                    
+                          <!-- Question 21 -->
+    
+    <div class= "slide" id = "Q21" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°21</h1>
+        </div>
+        <div class = "Question">
+            <h4>Entro il 2050, solare ed eolico arriveranno a coprire l’erogazione di energia elettrica globale per una percentuale pari al?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">25%</button>
+            <button class = "btn" onclick="falseAnswer1(this)">12%</button>
+            <button id = "answer_21" class = "btn true" onclick="trueAnswer(this)">50%</button>
+            <button class = "btn" onclick="falseAnswer1(this)">40%</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_21" class = "Answer">
+            <h4>50%</h4>
+            Si chiama “50 by 50” la previsione secondo cui solare ed eolico entro il 2050 porteranno al 50% la fornitura globale di elettricità “zero-carbon”, arrivando al 71% insieme a idrico, nucleare e rinnovabili minori.
+            
+        </div>
+    </div>
+        
+        
+                                                                                            
+                          <!-- Question 22 -->
+    
+    <div class= "slide" id = "Q22" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°22</h1>
+        </div>
+        <div class = "Question">
+            <h4>In Cina il costo complessivo del possesso di un’auto elettrica compatta potrebbe essere pari a quello di un veicolo tradizionale entro il?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">È già così</button>
+            <button class = "btn" onclick="falseAnswer1(this)">2050</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Non prima del 2030</button>
+            <button id = "answer_22" class = "btn true" onclick="trueAnswer(this)">2020</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_22" class = "Answer">
+            <h4>2020</h4>
+            I prezzi nel settore EV (Electric Vehicles) stanno scendendo del 15-20% annuo, al calare dei costi di produzione delle batterie agli ioni di litio. Questo mette la Cina sulla buona strada per produrre EV e motori a combustione interna a parità di costo entro il 2020.
+            
+        </div>
+    </div>
+        
+        
+                                                                                                    
+                          <!-- Question 23 -->
+    
+    <div class= "slide" id = "Q23" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°23</h1>
+        </div>
+        <div class = "Question">
+            <h4>Il più grande produttore globale di batterie per veicoli elettrici è?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">La statunitense Gigafactory</button>
+            <button class = "btn" onclick="falseAnswer1(this)">La coreana LG Chem</button>
+            <button class = "btn" onclick="falseAnswer1(this)">La svedese Northvolt</button>
+            <button id = "answer_23" class = "btn true" onclick="trueAnswer(this)">La giapponese Panasonic</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_23" class = "Answer">
+            <h4>La giapponese Panasonic</h4>
+            Il mercato delle batterie al litio è dominato dai produttori asiatici, fra i primi 10 produttori 7 sono cinesi. Dopo la giapponese Panasonic con il 40% del mercato, vengono la cinese CATL (23%) e la coreana LG Chem (18%).
+            
+        </div>
+    </div>
+        
+        
+                
+                                                                                                    
+                          <!-- Question 24 -->
+    
+    <div class= "slide" id = "Q24" style="display: none">
+        <div class = "QHeader">
+            <h1>News n°24</h1>
+        </div>
+        <div class = "Question">
+            <h4>Sette delle 10 città più inquinate del mondo sono in?</h4>
+        </div>
+        <div class= "QButtons">
+            <button class = "btn" onclick="falseAnswer1(this)">Cina</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Russia</button>
+            <button class = "btn" onclick="falseAnswer1(this)">Giappone</button>
+            <button id = "answer_24" class = "btn true" onclick="trueAnswer(this)">India</button>
+
+        </div>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div id = "correct_answer_24" class = "Answer">
+            <h4>India</h4>
+            Un recente studio di IQAir AirVisual e Greenpeace ha identificato le città in cui l'inquinamento atmosferico è più elevato. La lista è dominata dall'India, con sette delle peggiori 10 città: la numero 1 è Gurugram a sud della capitale New Dehli.
+            
+        </div>
+    </div>
+        
+        
     </body>
     
 <script>
+
+function startup(){
+    //alert('hey bitches');
+    //document.getElementById(Q1).style.display = 'none';
+}    
     
+var score = 0;   
 var question_number = 1;
 var answer = 'test';
+    
+//var IDLE_TIMEOUT = 30; //seconds
+//var _idleSecondsCounter = 0;
+//document.onclick = function() {
+ //   _idleSecondsCounter = 0;
+//};
+//window.setInterval(CheckIdleTime, 1000);
+
+//function CheckIdleTime() {
+ //   _idleSecondsCounter++;
+//    var oPanel = document.getElementById("SecondsUntilExpire");
+//    if (_idleSecondsCounter >= IDLE_TIMEOUT){
+//        location.reload();
+//    }
+//}
     
 //const home = document.getElementById("home");
 //const start = document.getElementById("start");
@@ -127,6 +746,18 @@ var answer = 'test';
 //    setTimeout(revert, 2000);
 //    }
     
+function start_quiz(){
+    page1.style.display = "none";
+    
+    //var test1 = getRandomInt(2)+1;
+    var random_num = Math.floor((Math.random() * 6)+1);
+    question_number = random_num;
+    var random_question = "Q" + random_num;
+    
+    //random_question.style.display = "block";
+    document.getElementById(random_question).style.display = "block";
+}
+    
 function falseAnswer1(elem){
     
     // turn clicked on question red
@@ -154,6 +785,10 @@ function reveal() {
     // reveal correct answer box
     document.getElementById(answer).classList.add("ansTrue");
     
+    var current_question = "Q" + question_number;
+    //hide current question & go to next question
+    setTimeout(next_question, 5000);
+    
 }
     
 function trueAnswer(elem){
@@ -170,11 +805,65 @@ function trueAnswer(elem){
     score = score +1;
     //alert(score);
     
+    var current_question = "Q" + question_number;
+    //hide current question & go to next question
+    setTimeout(next_question, 5000);
+    
 }
 
-var score = 0;
+function next_question(){
+    //alert('hi');
+    current_question = "Q" + question_number;
+    document.getElementById(current_question).style.display = "none";
+    
+    if (question_number > 18){
+        question_number = 25;
+        document.getElementById("final_score").innerHTML = score;
+        document.getElementById("scoreboard_header").innerHTML = "Hai risposto correttamente a "+ score + " domande su 8!";
+        
+        
+    }  else if (question_number > 12) {
+        question_number = Math.floor((Math.random() * 6)+19);
+    } else if (question_number > 6) {
+        question_number = Math.floor((Math.random() * 6)+13);
+    } else {
+        question_number = Math.floor((Math.random() * 6)+7);
+    }
     
     
+    //question_number = Math.floor((Math.random() * 2)+1);
+    
+    new_question = "Q" + question_number;
+    //document.getElementById(new_question).style.display = "block";
+    //alert(new_question);
+    document.getElementById(new_question).style.display = "block";
+}    
+    
+//document.getElementById("final_score").innerHTML = "test" 
     
 </script>
+    
+    <div class= "slide" id = "Q25" style="display: none">
+        <div class = "QHeader">
+            <h1>Punteggio finale</h1>
+        </div>
+        <div id = "scoreboard_header" class = "Question">
+            <h4>Hai risposto correttamente a <script>document.write(score)</script> domande su 8!</h4>
+        </div>
+        <div id = "scorecircle">
+            <div class = "circle">
+            </div>
+        
+        </div>
+        <p id="final_score" class ="largescore"><script>document.write(score)</script></p>
+        <div class="logo">
+            <img src="https://dl.dropboxusercontent.com/s/7b6enjfpa0l7dnb/ASI.png?dl=0">
+        </div>
+        <div class = "Answer">
+            <h4>Il 1° agosto</h4>
+            L’Earth Overshoot Day indica il momento dell’anno a partire dal quale il pianete vive in “debito” di risorse. Nel 1975 cadeva il 28 novembre, nel 1997 il 10 ottobre, nel 2018 è stato il 1° agosto.
+        </div>
+    </div>
+        
+    
 </html>
