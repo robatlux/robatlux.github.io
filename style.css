@@ -18,7 +18,7 @@ body {
     position: relative;
     background-size: cover;
     height: 100vh;
-    background-color: gray;
+    background-color: white;
     overflow: hidden;
     display: block;
 }
@@ -36,12 +36,17 @@ body {
     background-size: cover;
     height:100%;
     overflow: hidden;
-    opacity: 100;
+    opacity: 1;
+    transition: opacity 1s;
+    display: block;
     /*display: block; */
-    display: none;
     
 }
 
+#home.fade {
+    
+    opacity: 0;
+}
 
 
 
@@ -49,13 +54,22 @@ body {
 
 
 #start{
+    
     height: 100%;
     width: 100%;
     background-color:white;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity .5s;
+    display: none;
     /*display: none;*/
    
     
+}
+
+#start.fade {
+    
+    opacity: 0;
 }
 
 .start_button {
@@ -81,10 +95,11 @@ body {
     font-weight: 100;
     font-size: 3vh;
     width: 100vw;
+    top: 8.5%;
     left: 50%;
-    padding-top: 1vh;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
     text-align: center;
+    position: absolute;
 }
 
 .start_top_font {
@@ -171,7 +186,6 @@ body {
 
 .Question {
     
-
     position: absolute;
     left:50%;
     top: 20%;

@@ -16,14 +16,15 @@
         <!-- HOME SCREEN -->
         
     <div id = "page1"> 
-        <div id = "home">
+        <div id = "home" onclick="fade_to_start()">
         </div> 
         
-        <div id = "start"><div style="clear:both;"></div>
-           
+        <div id = "start">
+
             <div class="start_title_font">
                 <h1>Sei pronto per il giro del mondo?</h1>
             </div>
+            
             
             <div class="start_pos">
                     
@@ -745,6 +746,40 @@ var answer = 'test';
 //    } else {
 //    setTimeout(revert, 2000);
 //    }
+
+var home = document.getElementById('home');
+var start_screen = document.getElementById('start');
+
+    
+function fade_to_start(){
+    setTimeout(start_reveal, 500);
+    home.classList.toggle('fade');
+    start_screen.style.display = "block";
+    home.style.pointerEvents = 'none';
+    //start_screen.style.opacity = "1";
+    setTimeout(home_reset, 10000);
+    start_screen.style.pointerEvents = 'auto';
+
+    
+}
+    
+function start_reveal(){
+    //alert('hey bitches');
+   // home.style.display = "none";
+    start_screen.style.opacity = "1";
+    
+}
+    
+function home_reset(){
+    setTimeout(home_reveal, 200);
+    start_screen.style.opacity = "0";
+    home.style.pointerEvents = 'auto';
+    start_screen.style.pointerEvents = 'none';
+}
+
+function home_reveal(){
+    home.classList.toggle('fade');
+}
     
 function start_quiz(){
     page1.style.display = "none";
